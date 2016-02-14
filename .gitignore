@@ -1,0 +1,13 @@
+*.[oa]
+*~
+
+.idea/
+bin/
+gen/
+
+.classpath
+.project
+*.iml
+
+project.properties
+proguard-project.txt

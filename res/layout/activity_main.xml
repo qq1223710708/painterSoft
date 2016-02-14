@@ -1,0 +1,447 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.example.picturedemo718.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+            >
+
+        <Button
+            android:id="@+id/pen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="画笔"
+
+                />
+
+        <Button
+            android:id="@+id/fillcolor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="颜色" />
+
+        <Button
+            android:id="@+id/eraser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="橡皮" />
+
+        <Button
+            android:id="@+id/clearsceen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="清屏" />
+
+        <Button
+            android:id="@+id/redraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="重画" />
+
+        <Button
+            android:id="@+id/constituency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="选区" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="撤销" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="保存" />
+
+        <Button
+            android:id="@+id/open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="打开" />
+
+        <Button
+            android:id="@+id/paintsetalpha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="设置透明度" />
+
+        <Button
+            android:id="@+id/PicEffictiveness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="设置图片效果" />
+
+        <Button
+            android:id="@+id/FilleColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="填色" />
+        
+        <Button 
+            android:id="@+id/Share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="共享"
+            />
+        
+        <Button 
+            android:id="@+id/daoru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="导入"
+            />
+        
+        
+        <Button 
+            android:id="@+id/mainLayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="图层"
+            />
+
+        <Button
+            android:id="@+id/Uptask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="上传" />
+
+        <Button
+            android:id="@+id/Findtask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="查找作业" />
+
+        <Button
+            android:id="@+id/Mine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="我的" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top" >
+
+        <LinearLayout
+            android:id="@+id/paintViewLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/penSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top"
+        android:layout_centerInParent="true"
+        android:focusable="false"
+        android:orientation="horizontal"
+        android:visibility="invisible" >
+
+        <RadioGroup
+            android:id="@+id/penShape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/Curve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="曲线"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/Line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="直线"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/Square"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="正方形"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/Rect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="长方形"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/Circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="圆"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/Oval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="椭圆"
+                android:textColor="#000000" />
+            
+            <RadioButton
+                android:id="@+id/paintPicpaint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="图片画笔"
+                android:textColor="#000000" />
+        </RadioGroup>
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/LinearLayoutLayer"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/top"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        >
+		<Button 
+		    android:id="@+id/addLayer"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center_horizontal"
+		    android:text="添加图层"
+		    />        
+		    
+		<ListView 
+		    android:id="@+id/layershow"
+		    android:layout_gravity="center_horizontal"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/penSizeSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/penSelect"
+        android:layout_centerInParent="true"
+        android:focusable="false"
+        android:orientation="horizontal"
+        android:visibility="invisible" >
+
+        <RadioGroup
+            android:id="@+id/penSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="1"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="5"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/ten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="10"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/fifteen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="15"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/twenty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="20"
+                android:textColor="#000000" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/eraserSizeSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top"
+        android:layout_centerInParent="true"
+        android:focusable="false"
+        android:orientation="horizontal"
+        android:visibility="invisible" >
+
+        <RadioGroup
+            android:id="@+id/eraserSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/eraserfive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="5"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/eraserten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="10"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/eraserfifteen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="15"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/erasertwenty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="20"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/eraserthirty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="30"
+                android:textColor="#000000" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/penSetAlphaNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top"
+        android:layout_centerInParent="true"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <SeekBar
+            android:id="@+id/psetalpha"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/showpaintalpha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="90dp"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/PicEffictivenessLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/top"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <Button
+            android:id="@+id/EnlargePic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="放大图片" />
+
+        <Button
+            android:id="@+id/ShrinkPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="缩小图片" />
+
+        <Button
+            android:id="@+id/RotatePic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="旋转90度" />
+
+        <Button
+            android:id="@+id/ReflectionPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="倒影" />
+
+        <Button
+            android:id="@+id/Greyscale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="灰度图" />
+    </LinearLayout>
+
+</RelativeLayout>
